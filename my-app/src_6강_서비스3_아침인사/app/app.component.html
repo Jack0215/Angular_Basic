@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+국가별 인사를 선택하세요<br>
+<select (change)="handleEvent($event)">
+  <option>KR</option>
+  <option>US</option>
+  <option>CN</option>
+</select> <br>
+선택 코드 : {{country_code}} : 인사말{{mesg}}

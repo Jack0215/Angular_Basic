@@ -1,0 +1,9 @@
+선택한 도서 <input type="text">
+<h1>{{title}} {{bookList.length}}</h1>
+
+<ul>
+    <li *ngFor="let book of bookList">
+        <img src='../../assets/image/{{book.img}}' (click)="send(book.name)">
+        {{book.name}}
+    </li>
+</ul>

@@ -1,0 +1,5 @@
+<p>child works!</p>
+<button (click)="send('홍길동')"> 부모에게 데이터 전송</button>
+
+<!-- 자식에서 button -> send('홍길동') -> this.customEvent.emit('홍길동');
+    -> (customeEvent) = handleEvent($event) -> response에 저장 -> {{response}} 출력 -->

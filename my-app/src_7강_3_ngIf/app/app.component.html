@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<h2>논리값 명시적 지정</h2>
+<p *ngIf=true>true</p>
+<p *ngIf=false>false</p>
+<p *ngIf="true">"true"</p>
+<p *ngIf="false">"false"</p> 
+
+<h2>속성 바인딩 지정</h2> <!--클래스에 있는 값을 쓴다.-->
+<!--directive들은 {} 대괄호가 필요없다.-->
+<p *ngIf="result_true">"result_true"</p>
+<p *ngIf="result_true">result_true</p>
+<p *ngIf=!result_0>!result_0</p>
+<p *ngIf=result_0>result_0</p>
+<p *ngIf="result_10==10">"result_10==10"</p> 
+ 

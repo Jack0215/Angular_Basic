@@ -1,0 +1,13 @@
+<p>child works!</p>
+<button (click)="handleEvent()">stocks</button><br>
+<table border="1"> 
+    <tr>
+        <td>주식명</td>
+        <td>주식가격</td>
+    </tr>
+<tr *ngFor = "let stock of showStrocks"> 
+    <td>{{stock.stockSymbol}}</td>
+    <td>{{stock.stockPrice}}</td>
+</tr>
+</table> 
+ 

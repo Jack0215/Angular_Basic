@@ -1,0 +1,8 @@
+<h1>{{title}}</h1>
+날짜입력: <input type="text" placeholder="형식:20201208" [(ngModel)]="currentDate"> <br>
+<!--ngModel 쓰려면 app.Module.ts에 FormsModule import 해야한다.-->
+<button (click)="handleEvent('-')"> - 포맷</button> 
+<button (click)="handleEvent('+')"> / 포맷</button>
+현재날짜: {{currentDate|my:flag}}<br> 
+
+

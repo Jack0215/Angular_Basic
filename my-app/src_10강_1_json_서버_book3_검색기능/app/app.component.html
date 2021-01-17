@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+검색도서명 <input type="text" #kkk>
+                <!--app.com.ts-->
+<button (click)="send(kkk.value)">요청</button> <!-- kkk.value를 service에 전달할것임-->
+<table border="1">
+    <tr>
+        <th>도서명</th>
+        <th>이미지</th>
+    </tr>
+    <tr *ngFor="let item of items">
+        <th>{{item.name}}</th>
+        <th><img src="http://localhost:3000/image/{{item.img}}" width="100" height="100"></th>
+    </tr>
+</table> 

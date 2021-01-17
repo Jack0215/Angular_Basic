@@ -1,0 +1,7 @@
+<h1>{{title}}</h1>
+아이디:
+<!--포커스가 왔을경우 핸들이벤트에 트루값 넘김. 
+    포커스 없는경우(blur)에는 핸들이벤트 false값 넘김-->
+<input type="text" (focus)="handleEvent(true)" (blur)="handleEvent(false)"
+[class.input]="flag"/>
+<!--.input의 클래스 값을 읽어오도록 설정-->  

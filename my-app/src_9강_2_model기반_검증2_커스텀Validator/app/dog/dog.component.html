@@ -1,0 +1,24 @@
+<h1>강아지 등록화면</h1>
+    <!--(ngSubmit) -> onsubmit이벤트와 앵귤러js표현식을 바인딩해준다. ngForm -> form 디렉티브 안에 컨트롤 그룹들을 만들 수 있게 해준다.--> 
+<form (ngSubmit)="onSubmit()" [formGroup]="form"> <!--form 그룹을 form에 넣었음, formGroup, ngSubmit으로 묶기-->
+이름 : <input type="text" name="name" id="name" formControlName="upperCase_2"><br> <!--실제 유효성 검사를 실시 할 항목1-->
+나이 : <input type="text" name="age" id="age" formControlName="requried_1"><br> <!--실제 유효성 검사를 실시 할 항목2-->
+종류
+<select name="species" id="species">
+    <option>선택하세요</option>
+    <option>진돗개</option>
+    <option>푸들</option> 
+    <option>치와와</option>
+</select> <br>
+friends:<input type="text" name="friends" id="friends" formControlName="eq5_1">5입력<br>
+<input type="Submit" value="Submit" [disabled]="form.invalid"> <!--true/false의 변화-->
+</form>
+{{dog|json}}
+<h3>form 유효성 검증 </h3><br> 
+<p>1.form.valid:{{form.valid}}</p>
+<p>2.form.value:{{form.value|json}}</p>
+<p>form 유효성 검증</p>
+<p>1.form.controls.requried_1.value:{{form.controls.requried_1.value}}</p>
+<p>2.form.controls.requried_1.valid:{{form.controls.requried_1.valid}}</p> 
+<p>3.form.controls.upperCase_2.vlaue:{{form.controls.upperCase_2.value}}</p>
+<p>4.form.controls.upperCase_2.valid:{{form.controls.upperCase_2.valid}}</p>   
